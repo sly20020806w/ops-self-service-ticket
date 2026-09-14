@@ -1,7 +1,8 @@
 <template>
   <div class="page">
+    <NavBar />
     <div class="brand">审计日志 & IM/Webhook 通知</div>
-    <div class="sub">增强项：全链路留痕；课程通知能力在此可对接企业微信/钉钉 Webhook</div>
+    <div class="sub">增强项：全链路留痕；课程通知能力可对接企业微信/钉钉/飞书 Webhook。</div>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px">
       <div class="panel">
@@ -18,7 +19,7 @@
           <el-table-column prop="createdAt" label="时间" width="170" />
           <el-table-column prop="channel" label="通道" width="90" />
           <el-table-column prop="target" label="目标" width="100" />
-          <el-table-column prop="content" label="内容" />
+          <el-table-column prop="content" label="内容" show-overflow-tooltip />
           <el-table-column prop="status" label="状态" width="80" />
         </el-table>
       </div>
@@ -29,6 +30,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { api } from '../api'
+import NavBar from '../components/NavBar.vue'
 
 const audits = ref([])
 const notifies = ref([])

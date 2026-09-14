@@ -1,7 +1,8 @@
 <template>
   <div class="page">
+    <NavBar />
     <div class="brand">表单设计器 & 流程定义</div>
-    <div class="sub">对齐课程：表单字段 JSON、流程节点、排他网关 edges</div>
+    <div class="sub">对齐课程：动态表单字段 JSON、流程节点、排他网关 edges、服务树叶子绑定。</div>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px">
       <div class="panel">
@@ -11,7 +12,7 @@
           <el-table-column prop="name" label="名称" />
           <el-table-column prop="description" label="说明" />
         </el-table>
-        <pre class="code">{{ pretty(forms[0]?.fields) }}</pre>
+        <pre class="code">{{ pretty(forms[0]?.fields || forms[0]?.fieldsJSON) }}</pre>
       </div>
       <div class="panel">
         <h3 style="margin-top:0">流程定义</h3>
@@ -21,9 +22,9 @@
           <el-table-column prop="formId" label="表单" width="80" />
         </el-table>
         <h4>Nodes</h4>
-        <pre class="code">{{ pretty(flows[0]?.nodes) }}</pre>
+        <pre class="code">{{ pretty(flows[0]?.nodes || flows[0]?.nodesJSON) }}</pre>
         <h4>Edges（含 exclusive gateway）</h4>
-        <pre class="code">{{ pretty(flows[0]?.edges) }}</pre>
+        <pre class="code">{{ pretty(flows[0]?.edges || flows[0]?.edgesJSON) }}</pre>
       </div>
     </div>
 
@@ -43,6 +44,7 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { api } from '../api'
+import NavBar from '../components/NavBar.vue'
 
 const forms = ref([])
 const flows = ref([])
