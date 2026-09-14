@@ -2,7 +2,7 @@
   <div class="page">
     <NavBar />
     <div class="brand">表单设计器 & 流程定义</div>
-    <div class="sub">对齐课程：动态表单字段 JSON、流程节点、排他网关 edges、服务树叶子绑定。</div>
+    <div class="sub">动态表单字段、流程节点、排他网关、服务树叶子绑定。</div>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px">
       <div class="panel">

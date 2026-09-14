@@ -2,7 +2,7 @@
   <div class="login-page">
     <div class="panel login-box">
       <div class="brand">自主工单 <span>Ticket</span></div>
-      <div class="sub">课程对齐：表单 / 流程 / 排他网关 / 服务树 / 状态动作 / IM 通知<br/>加分：SLA、审计、看板、Webhook —— 可直接演示给老板</div>
+      <div class="sub">自主工单平台：表单、流程、排他网关、服务树、状态动作、IM 通知；含 SLA、审计与运营看板。</div>
       <el-form style="margin-top:18px" @submit.prevent="onLogin">
         <el-form-item label="账号">
           <el-select v-model="username" style="width:100%">

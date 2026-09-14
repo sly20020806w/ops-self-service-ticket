@@ -53,7 +53,7 @@ func SeedDemo(db *gorm.DB) error {
         })
         form := model.FormTemplate{
                 Name:        "虚拟机资源申请",
-                Description: "对齐课程：动态表单设计器字段",
+		Description: "虚拟机资源申请动态表单",
                 FieldsJSON:  string(fields),
                 Enabled:     true,
         }

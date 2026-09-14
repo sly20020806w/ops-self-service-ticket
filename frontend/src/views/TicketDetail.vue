@@ -36,7 +36,7 @@
     </div>
 
     <div class="panel" style="margin-top:16px">
-      <h3 style="margin-top:0">流转记录（课程：动作时间线）</h3>
+      <h3 style="margin-top:0">流转记录</h3>
       <el-timeline>
         <el-timeline-item v-for="a in actions" :key="a.id" :timestamp="a.createdAt" placement="top">
           <b>{{ a.action }}</b> · {{ a.actor?.display || a.actorId }}

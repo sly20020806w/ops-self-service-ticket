@@ -2,7 +2,7 @@
   <div class="page">
     <NavBar />
     <div class="brand">审计日志 & IM/Webhook 通知</div>
-    <div class="sub">增强项：全链路留痕；课程通知能力可对接企业微信/钉钉/飞书 Webhook。</div>
+    <div class="sub">操作审计与 IM/Webhook 通知记录，可对接企业微信/钉钉/飞书。</div>
 
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px">
       <div class="panel">

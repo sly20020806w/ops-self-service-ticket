@@ -10,7 +10,7 @@ import (
         "gorm.io/gorm"
 )
 
-// Notifier 对齐课程「工单和 IM 通知整合」，增强 webhook 卡片推送。
+// Notifier 工单事件通知：支持控制台与 Webhook。
 type Notifier struct {
         DB      *gorm.DB
         Webhook string

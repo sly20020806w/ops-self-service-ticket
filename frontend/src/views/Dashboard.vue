@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <NavBar />
-    <div class="brand">老板演示看板</div>
+      <div class="brand">运营看板</div>
     <div class="sub">一眼看清工单吞吐、状态分布与 SLA 风险，适合评审/述职截图。</div>
 
     <div class="stats" style="margin-top:16px">

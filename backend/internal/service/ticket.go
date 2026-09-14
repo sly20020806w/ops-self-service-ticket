@@ -167,7 +167,7 @@ func (s *TicketService) routeExclusive(t *model.Ticket, on string) string {
         formData := map[string]any{}
         _ = json.Unmarshal([]byte(t.FormDataJSON), &formData)
 
-        // 课程「排他网关」：按表单 urgent 字段分流（增强可读条件）
+	// 排他网关：按表单 urgent 字段分流
         urgent, _ := formData["urgent"].(bool)
         for _, e := range edges {
                 if e.From == "gateway" || (e.From == t.CurrentNode && e.On == on) {
